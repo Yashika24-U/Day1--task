@@ -1,0 +1,54 @@
+OBJECT AND ITS INTERNAL REPRESENTATION
+
+Objects are important datatypes in JavaScript. Objects are different than primitive datatypes (ie
+number, string , boolean etc..) Primitive datatype contain one value, but objects can hold many 
+values in the form of key: value pairs.
+ In JavaScript , almost everything is  an object . 
+- Booleans can be objects (if defined with the new keyword)
+- Numbers can be objects (if defined with the new keyword)
+- Strings can be objects (if defined with the new keyword)
+Dates , Math , Regular Expressions , Arrays , Functions , Objects are always objects.
+Objects and Variables:
+JavaScript Variables  can contain single values.  
+let person = "Yashika";
+But object can contain multiple values. Objects are variables too. Object values are written as 
+name :valuepairs  (name and value separated by a colon)
+let person = {firstName : "Yashika" , lastName : "U" , age : 18 , designation : 'developer'};
+JavaScript object is a collection of named values.
+Creating JavaScript Object: 
+Here are different ways to create objects in JavaScript.
+1. Create a single object , using an object literal.
+let car = {name : 'Supersport' , maker : 'Ducati' , engine : '937cc'};
+2. Using the JavaScript keyword new.
+var person  = new Object();
+person.firstName = "Yashika" ;
+person.designation = "Developer";
+person.salary = 90000;
+3. Define an object constructor , and then create objects of constructed type 
+function person(name , designation)
+{
+this.name = name;
+this.designation = designation;
+}
+let pers1 = new('Shakespeare' , 'poet');
+let pers2 = new('Rudyard kipling' , 'poet');
+4. Using the object.create method:
+var animal1= Object.create(Animal);
+animal1.displaytype = 'Invertebrates' ;
+Object Properties and Methods:
+A JavaScript object has the properties associated with it. A property of an object can be explained
+ as a variable that is attached to the Object . Object  properties are  basically the same as ordinary
+ JavaScript variables , except for the attachment to object. Accessing the properties of an object by 
+. (dot) Notation. The properties are case-sensitive. 
+     ObjectName.propertyName
+Example :   
+var person = {firstName : "Annanya" , lastName :"Pandey" , age :26 , hobby:"reading"}
+person.firstName;
+Properties can also be accessed by using  Bracket Notation.
+person['firstName'];
+An object property name can be any valid JavaScript  string or anything that can be converted into 
+string . However any property name that is not a valid JavaScript  identifier . (EX: property name
+ that  starts with number , hyphen , space can only be accessed using square bracket notation.  This 
+notation is also very useful when properties are to be dynamically determined.
+
+
