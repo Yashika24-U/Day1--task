@@ -1,0 +1,25 @@
+HTTP: Hypertext Transfer Protocol
+It is a protocol used to access the data on the World Wide Web(www).The Http protocol can be used to transfer the data in the form of plaintext , hypertext , audio , video and so on.
+===========DIFFERENCE BETWEEN HTTP/1.1 and HTTP============
+
+HTTP1.1:
+Timothy Berners-Lee in 1989 developed HTTP protocol. HTTP1.1 was the first standardized protocol.
+
+In this process , a client sends a text-based request to a server by calling method like GET or POST. In response, the server sends a resource like an HTML  page back to the client. This request uses the GET method which asks for data from the host server. In this response to the requesting client , in addition to any images,stylesheets or other resource called for in the HTML.
+
+Note that not all of the resources are returned to the client in the firstcall for data.The requests and responses will go back and forth between client and server untill the web browser has received all the resource necessary to render the content of the HTML page of the screen. This was the reason that HTTP1.1 was known to have poor response response time .With websites becoming more resource intense the protocol was losing its efficiency.It progressively became essential to minimize latency and boost page load speed , where HTTP2 comes into picture.
+
+HTTP2:
+HTTP2 began as the SPDY protocol developed primary at google with the intension of reducing webpage load latency by using techniques such as multiplexing , serverpush and compression.
+HTTP2 is much faster and  more reliable than HTTP1.1. HTTP2 avoids network delay by multiplexing.
+
+MULTIPLEXING:
+When a client make a request for the webpage , the server sends several stream of data to the client at once , instead of sending something after another. This method of data delivery is known as multiplexing.
+
+SERVER PUSH:
+Typically a server only serves content to a client device if the client asks for it.
+Hoewever, this approach is not always a practical for modern webpages , which often involves several dozens seperate resource that the client must
+request, where HTTP2 solves this problem by allowing a server to "push" content to a client before the client ask for it.The server also sends a message letting the client before the client asks for it.
+
+HEADER COMPRESSION:
+ Small files sends more quickly than large ones. To speed up perfomance , both HTTP/1.1 and HTTP/2 compress HTTP message to make them smaller . However HTTP2 uses a more advanced compression method called HPACK that eliminates redundant information in HTTP header packets . This eliminates a fewbytes from every bytes ,from every HTTP packet.  This makes HTTP2 more fatser than HTTP/1.1 
